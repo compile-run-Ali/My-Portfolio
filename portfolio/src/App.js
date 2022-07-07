@@ -1,24 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Landing from './pages/Landing';
+import Projects from './pages/Projects';
+import About from './pages/About';
+import { createTheme } from '@material-ui/core';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#ef5350",
+    },
+    secondary: {
+      main: "#80d8ff",
+    },
+  },
+  typography: {
+    fontFamily: "Prompt",
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route index exact element={<Landing theme={theme}/>}/>
+        <Route path="/projects" exact element={<Projects theme={theme}/>}/>
+        <Route path="/aboutme" exact element={<About theme={theme}/>}/>
+      </Routes>
+      </Router>
   );
 }
 
