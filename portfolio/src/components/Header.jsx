@@ -3,6 +3,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
+import HomeIcon from '@material-ui/icons/Home';
 import Toolbar from "@material-ui/core/Toolbar";
 import { makeStyles, ThemeProvider} from "@material-ui/core";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
@@ -41,10 +42,11 @@ export default function Header(props) {
   return (
     <ThemeProvider theme={props.theme}>
       <Box>
-        <AppBar position="fixed">
+        <AppBar position={props.page==="singleProj"?"static":"fixed"}>
           <Toolbar>
             <Typography className={classes.typo} onClick={handleClickName}>
               Ali Abdullah
+              <HomeIcon/>
             </Typography>
             <ButtonGroup className={classes.buttonGroup}>
               <Button
