@@ -39,12 +39,15 @@ const useStyles = makeStyles((theme) => {
     },
     aboutCont:{
       display: "flex",
-      justifyContent: "center",
+      justifyContent: "space-between",
       alignItems: "center",
-      margin:"150px",
-      background: 'rgba(250,0,0,0.2)',
+      margin:"10%",
+      padding:"5%",
+      background: 'transparent',
       [theme.breakpoints.down('sm')]:{
         flexDirection:"Column",
+        margin:"20%",
+
       }, 
 
     },
