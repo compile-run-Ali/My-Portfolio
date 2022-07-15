@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import data from "../data";
 import Header from "../components/Header";
 import Overlay from "../components/Overlay";
+import Footer from "../components/Footer";
+
 
 
 export default function SingleProject(props) {
@@ -15,7 +17,8 @@ export default function SingleProject(props) {
     <div>
       <Header page="singleProj" theme={props.theme} />
       <img src={project[0].pic} className={props.classes.img} />
-      <Overlay  key={project[0].id} {...project[0]} classes={props.classes}/>     
+      <Overlay  key={project[0].id} {...project[0]} classes={props.classes}/> 
+      <Footer/>    
     </div>
   );
 }

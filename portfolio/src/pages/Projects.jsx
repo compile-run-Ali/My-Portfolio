@@ -5,6 +5,7 @@ import data from "../data";
 import CardBtn from "../components/CardBtn";
 import { useNavigate } from "react-router";
 import Typography from "@material-ui/core/Typography";
+import Footer from "../components/Footer";
 
 export default function Projects(props) {
   const navigate = useNavigate();
@@ -26,6 +27,7 @@ export default function Projects(props) {
         <Container className={props.classes.projectCards} maxWidth={false}>
           {projects}
         </Container>
+        <Footer/>
     </div>
   );
 }

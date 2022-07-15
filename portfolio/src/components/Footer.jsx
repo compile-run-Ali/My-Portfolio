@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => {
       footer:{
         display:"flex",
         justifyContent:"space-around",
-        position:"fixed",
+        position:"static",
         bottom:0,
         padding:"15px",
         boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
