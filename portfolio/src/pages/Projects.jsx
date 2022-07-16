@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
-import { Container } from "@material-ui/core";
+import { Container, ThemeProvider } from "@material-ui/core";
 import data from "../data";
 import CardBtn from "../components/CardBtn";
 import { useNavigate } from "react-router";
@@ -17,6 +17,8 @@ export default function Projects(props) {
   });
   return (
     <div>
+      <ThemeProvider  theme={props.theme}>
+
       <Header page="projects" theme={props.theme} />
       <Container className={props.classes.cont} maxWidth={false}>
 
@@ -28,6 +30,7 @@ export default function Projects(props) {
           {projects}
         </Container>
         <Footer/>
+      </ThemeProvider>
     </div>
   );
 }

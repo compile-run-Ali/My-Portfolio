@@ -4,7 +4,7 @@ import data from "../data";
 import Header from "../components/Header";
 import Overlay from "../components/Overlay";
 import Footer from "../components/Footer";
-
+import { ThemeProvider } from "@material-ui/core";
 
 
 export default function SingleProject(props) {
@@ -14,11 +14,11 @@ export default function SingleProject(props) {
   });
   console.log(project[0].title);
   return (
-    <div>
+    <ThemeProvider  theme={props.theme}>
       <Header page="singleProj" theme={props.theme} />
       <img src={project[0].pic} className={props.classes.img} />
       <Overlay  key={project[0].id} {...project[0]} classes={props.classes}/> 
       <Footer/>    
-    </div>
+    </ThemeProvider >
   );
 }

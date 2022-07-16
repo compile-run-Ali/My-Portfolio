@@ -8,22 +8,24 @@ import { useNavigate } from "react-router";
 import Footer from "../components/Footer";
 
 
+
 export default function Landing(props) {
   const navigate=useNavigate();
   function handleClick(){
     navigate("/projects")
   }
   return (
-    <ThemeProvider>
+    <ThemeProvider  theme={props.theme}>
       <Header page="landing" theme={props.theme} />
-
+    <div className={props.classes.landing}>
       <Container className={props.classes.box} maxWidth={false}>
         <Typography className={props.classes.root}  >
           Hi, I'm Ali Abdullah👋. I am a React Front-End developer. I Love to make pretty Designs 😊.
         </Typography>
-        <Button className={props.classes.btn} variant="outlined" color="primary" onClick={handleClick}>Check out some of my projects✨</Button>
+        <Button className={props.classes.btn} variant="contained" color="secondary"  onClick={handleClick}>Check out some of my projects✨</Button>
       </Container>
     <Footer/>
+    </div>
     </ThemeProvider>
   );
 }

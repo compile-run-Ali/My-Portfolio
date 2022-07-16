@@ -10,6 +10,8 @@ import Projects from './pages/Projects';
 import About from './pages/About';
 import SingleProject from './pages/singleProject';
 import { createTheme, makeStyles } from '@material-ui/core';
+import image from "./frontendbackend.jpg";
+
 
 const theme = createTheme({
   palette: {
@@ -59,7 +61,7 @@ const useStyles = makeStyles((theme) => {
       minHeight: "50vh",
       marginTop:"250px",
       background: 'rgba(250,0,0,0.2)',
-      padding:"5%"
+      padding:"5%",
     },
     btn:{
         padding:"1.5em",
@@ -94,6 +96,14 @@ const useStyles = makeStyles((theme) => {
       background:"#FFFBF6",
       flexDirection:"column",
       alignItems:"center",
+    },
+    landing:{
+      backgroundImage:`url(${image})`,
+      backgroundSize:"cover",
+      backgroundRepeat:"no-repeat",
+      zIndex:-1,
+      height:"100%",
+      position:"absolute"
     }
   };
 });
