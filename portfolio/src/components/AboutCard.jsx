@@ -28,6 +28,10 @@ const useStyles = makeStyles((theme) => {
         "&:hover": {
           textDecoration: "underline",
         },
+        [theme.breakpoints.down("sm")]: {
+          fontSize:"0.8em"
+        },
+        
       },
       root: {
         margin: "3%",
