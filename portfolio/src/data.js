@@ -4,7 +4,7 @@ import image3 from "./medical.jpeg";
 import image2 from "./social.png";
 
 
-export default[
+const data=[
     {
         id:1,
         title:"Music Player",
@@ -43,3 +43,4 @@ export default[
 
     }
 ]
+export default data
