@@ -1,8 +1,8 @@
 import image1 from "./pfp1.jpg";
-import image3 from "./pfp2.jpg";
-import image2 from "./pfp3.jpg";
+import image2 from "./pfp2.jpg";
+import image3 from "./pfp3.jpg";
 
-export default[
+const testimonials=[
     {
         id:1,
         name:"Moosah Butt",
@@ -21,5 +21,6 @@ export default[
         name:"Dr. Attiya Rasool",
         remarks:"Medical Inventory system was great for managing the clinic pharmacy.",
         image:image3,
-    },
+    }
 ]
+export default testimonials

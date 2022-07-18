@@ -8,7 +8,6 @@ import { useNavigate } from "react-router";
 import Footer from "../components/Footer";
 import Testimonials from "../components/Testimonials";
 import testimonials from "../testimonials";
-import Divider from "@material-ui/core/Divider";
 
 
 
