@@ -9,13 +9,6 @@ import {makeStyles} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => {
     return {
-      image: {
-        borderRadius: "50%",
-        width: "250px",
-        [theme.breakpoints.down("sm")]: {
-          width: "150px",
-        },
-      },
       text: {
         fontFamily: "prompt",
         fontSize: "2em",
@@ -43,7 +36,7 @@ export default function AboutCard(props) {
     const classes=useStyles()
   return (
     <Card className={props.classes.aboutCont}>
-    <CardMedia component="img" image={image} className={classes.image} />
+    <CardMedia component="img" image={image} className={props.classes.image} />
     <Container className={classes.root}>
       <Typography className={classes.text}>
         I'm Ali Abdullah, a React Front-End developer.

@@ -24,6 +24,7 @@ export default function Projects(props) {
 
         <Typography className={props.classes.root}>
           A few of my Projects,
+          <hr></hr>
         </Typography>
       </Container>
         <Container className={props.classes.projectCards} maxWidth={false}>

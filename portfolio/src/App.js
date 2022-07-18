@@ -39,16 +39,40 @@ const useStyles = makeStyles((theme) => {
       }, 
       marginTop:"100px"
     },
+    testFont: {
+      fontFamily: "Prompt",
+      fontStyle:"italic",
+      fontWeight: 200,
+      fontSize: "3em",
+      color: "#002d72",
+      [theme.breakpoints.down('sm')]:{
+        fontSize:"2em",
+      }, 
+      marginTop:"100px"
+    },
     aboutCont:{
       display: "flex",
       justifyContent: "space-between",
       alignItems: "center",
       margin:"10%",
       padding:"5%",
-      background: 'transparent',
+      background: '#FFFBF6',
       [theme.breakpoints.down('sm')]:{
         flexDirection:"Column",
         margin:"20%",
+
+      }, 
+
+    },
+    testCardCont:{
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      padding:"2%",
+      margin:"2%",
+      background: 'rgba(255, 251, 246, 0.8)',
+      [theme.breakpoints.down('sm')]:{
+        flexDirection:"Column",
 
       }, 
 
@@ -97,6 +121,28 @@ const useStyles = makeStyles((theme) => {
       flexDirection:"column",
       alignItems:"center",
     },
+    testCont:{
+      display:"flex",
+      minHeight: "50vh",
+      zIndex: 1,
+      background:"#2abbf9",
+      flexDirection:"column",
+      alignItems:"center",
+    },
+    alternativeCont:{
+      display:"flex",
+      zIndex: 1,
+      background:"#2abbf9",
+      flexDirection:"column",
+      alignItems:"flex-start",
+    },
+    alternativeCont2:{
+      display:"flex",
+      zIndex: 1,
+      background:"#2abbf9",
+      flexDirection:"column",
+      alignItems:"flex-end",
+    },
     landing:{
       backgroundImage:`url(${image})`,
       backgroundSize:"cover",
@@ -104,6 +150,13 @@ const useStyles = makeStyles((theme) => {
       zIndex:-1,
       height:"100%",
       position:"absolute"
+    },
+    image: {
+      borderRadius: "50%",
+      width: "250px",
+      [theme.breakpoints.down("sm")]: {
+        width: "150px",
+      },
     }
   };
 });
